@@ -103,11 +103,11 @@ main {
 .buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
 }
 
 .btn-primary {
-  display: inline-block;
+  display: block;
   background: #f5f5f5;
   border-radius: 5px;
   padding: 10px 30px;
@@ -116,11 +116,18 @@ main {
   font-weight: 400;
   font-size: 14px;
   color: #000000;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  transform: scale(1.1);
 }
 
 .btn-sec {
-  display: inline-block;
-
+  display: block;
   background: #1f1f1f;
   border-radius: 5px;
   padding: 10px 30px;
@@ -129,4 +136,12 @@ main {
   font-weight: 400;
   font-size: 14px;
   color: #797979;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.btn-sec:hover,
+.btn-sec:focus,
+.btn-sec:active {
+  transform: scale(1.1);
 }
