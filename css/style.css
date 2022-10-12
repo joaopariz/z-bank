@@ -72,6 +72,24 @@ main {
   margin-bottom: 30px;
 }
 
+.titulo::after {
+  content: "|";
+  margin-left: 5px;
+  opacity: 1;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
 .paragrafo {
   font-family: "Sora";
   font-style: normal;
