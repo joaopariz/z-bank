@@ -78,6 +78,11 @@ main {
   margin-bottom: 30px;
 }
 
+.titulo::selection {
+  background: #fff;
+  color: #000;
+}
+
 .titulo::after {
   content: "|";
   margin-left: 5px;
@@ -104,6 +109,11 @@ main {
   line-height: 23px;
   color: #878787;
   margin-bottom: 30px;
+}
+
+.paragrafo::selection {
+  background: #fff;
+  color: #000;
 }
 
 .buttons {
