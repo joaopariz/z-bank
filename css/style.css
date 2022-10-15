@@ -119,6 +119,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+  margin-bottom: 50px;
 }
 
 .btn-primary {
@@ -172,14 +173,23 @@ main {
 }
 
 @media (max-width: 800px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .img-principal {
+    grid-column: 1;
+  }
   .titulo {
     font-size: 38px;
+    text-align: center;
   }
   .paragrafo {
     font-size: 16px;
+    text-align: center;
   }
   .buttons {
     gap: 10px;
+    justify-content: center;
   }
   .btn-primary,
   .btn-sec {
@@ -188,17 +198,11 @@ main {
 }
 
 @media (max-width: 600px) {
-  main {
-    grid-template-columns: 1fr;
-  }
   .nav-menu {
     width: 300px;
   }
   .nav-menu a {
     font-size: 12px;
-  }
-  .img-principal {
-    grid-column: 1;
   }
   .titulo {
     font-size: 30px;
@@ -211,7 +215,6 @@ main {
   .buttons {
     justify-content: center;
     gap: 15px;
-    margin-bottom: 50px;
   }
 }
 
