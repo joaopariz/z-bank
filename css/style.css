@@ -34,7 +34,7 @@ header {
   justify-content: space-around;
 }
 
-.itens-menu {
+.nav-menu a {
   display: flex;
   font-size: 1rem;
   font-family: "Sora", sans-serif;
@@ -44,12 +44,13 @@ header {
   transition: all 0.3s;
 }
 
-.itens-menu:hover {
+.nav-menu a:hover {
   color: #878787;
 }
 
 main {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   max-width: 1280px;
   height: 600px;
   margin: auto;
@@ -60,8 +61,13 @@ main {
 }
 
 .container {
+  box-sizing: border-box;
   padding-left: 50px;
   padding-right: 50px;
+}
+
+.conteudo-principal {
+  grid-column: 1;
 }
 
 .titulo {
@@ -107,7 +113,7 @@ main {
 }
 
 .btn-primary {
-  display: block;
+  display: inline-block;
   background: #f5f5f5;
   border-radius: 5px;
   padding: 10px 30px;
@@ -115,6 +121,7 @@ main {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
+  max-width: max-content;
   color: #000000;
   transition-duration: 0.3s;
   transition-property: transform;
@@ -127,7 +134,7 @@ main {
 }
 
 .btn-sec {
-  display: block;
+  display: inline-block;
   background: #1f1f1f;
   border-radius: 5px;
   padding: 10px 30px;
@@ -135,6 +142,7 @@ main {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
+  max-width: max-content;
   color: #797979;
   transition-duration: 0.3s;
   transition-property: transform;
@@ -144,4 +152,56 @@ main {
 .btn-sec:focus,
 .btn-sec:active {
   transform: scale(1.1);
+}
+
+.img-principal {
+  grid-column: 2;
+}
+
+.img-principal img {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .titulo {
+    font-size: 38px;
+  }
+  .paragrafo {
+    font-size: 16px;
+  }
+  .buttons {
+    gap: 10px;
+  }
+  .btn-primary,
+  .btn-sec {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .nav-menu {
+    width: 300px;
+  }
+  .nav-menu a {
+    font-size: 12px;
+  }
+  .img-principal {
+    grid-column: 1;
+  }
+  .titulo {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  .paragrafo {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .buttons {
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+  }
 }
