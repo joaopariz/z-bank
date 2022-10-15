@@ -10,7 +10,6 @@ body {
   background: #000;
 }
 
-ul,
 a {
   list-style: none;
   text-decoration: none;
@@ -214,4 +213,29 @@ main {
     gap: 15px;
     margin-bottom: 50px;
   }
+}
+
+/* Animação */
+
+.fadeInDown {
+  transform: translate3d(0, -20px, 0);
+}
+.fadeInUp {
+  transform: translate3d(0, 20px, 0);
+}
+.fadeInRight {
+  transform: translate3d(20px, 0, 0);
+}
+.fadeInLeft {
+  transform: translate3d(-20px, 0, 0);
+}
+
+/* 7 Adicione o CSS Essencial abaixo */
+[data-anime] {
+  opacity: 0;
+}
+.anime {
+  opacity: 1;
+  transform: none;
+  transition: transform 0.8s, opacity 0.8s;
 }

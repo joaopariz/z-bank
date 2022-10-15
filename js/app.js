@@ -1,3 +1,5 @@
+// Typewriter
+
 function typeWriter(element) {
   const arrayText = element.innerHTML.split("");
   element.innerHTML = "";
@@ -8,3 +10,5 @@ function typeWriter(element) {
 
 const tittle = document.querySelector(".titulo");
 typeWriter(tittle);
+
+new SimpleAnime();
